@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projectile Motion Simulator</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f6fb;
+    color: #1e293b;
+}
+
+header {
+    background: #10213d;
+    color: white;
+    text-align: center;
+    padding: 75px 20px;
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+header p {
+    color: #cbd5e1;
+    font-size: 18px;
+}
+
+nav {
+    background: #1e3a5f;
+    padding: 16px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+section {
+    max-width: 950px;
+    margin: 35px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+}
+
+h2 {
+    color: #1d4ed8;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.card {
+    background: #eaf1fc;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 7px;
+    text-decoration: none;
+    margin-top: 12px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #10213d;
+    color: white;
+}
+
+@media(max-width:600px) {
+    header h1 { font-size: 30px; }
+    nav a { display: inline-block; margin: 8px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Projectile Motion Simulator</h1>
+    <p>MATLAB Physics Course Enhancement Project</p>
+    <p>Analyzing Projectile Motion With and Without Air Resistance</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#physics">Physics</a>
+    <a href="#simulator">Simulator</a>
+    <a href="#results">Results</a>
+    <a href="#conclusion">Conclusion</a>
+</nav>
+
+<section id="about">
+    <h2>About the Project</h2>
+
+    <p>
+    This project explores projectile motion using MATLAB.
+    The purpose is to compare the trajectory of a projectile
+    with and without air resistance and understand how
+    different physical variables influence its movement.
+    </p>
+
+    <p>
+    The simulation allows users to change the initial velocity,
+    launch angle, projectile mass, and surface area.
+    </p>
+</section>
+
+<section id="physics">
+    <h2>Physics and Mathematical Models</h2>
+
+    <h3>Without Air Resistance</h3>
+
+    <p>Horizontal position:</p>
+    <p>x(t) = v₀ cos(θ)t</p>
+
+    <p>Vertical position:</p>
+    <p>y(t) = v₀ sin(θ)t - ½gt²</p>
+
+    <h3>With Air Resistance</h3>
+
+    <p>Drag force:</p>
+    <p>Fᴅ = ½ρCᴅAv²</p>
+
+    <p>
+    Air resistance acts opposite to the direction of motion
+    and changes the projectile's acceleration and trajectory.
+    </p>
+</section>
+
+<section id="simulator">
+    <h2>MATLAB Simulator</h2>
+
+    <p>
+    The MATLAB application accepts four user inputs:
+    initial velocity, launch angle, mass, and surface area.
+    It calculates projectile motion under both conditions
+    and generates comparison graphs.
+    </p>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Velocity</h3>
+            <p>Initial launch speed</p>
+        </div>
+
+        <div class="card">
+            <h3>Launch Angle</h3>
+            <p>Projectile launch direction</p>
+        </div>
+
+        <div class="card">
+            <h3>Mass</h3>
+            <p>Projectile mass</p>
+        </div>
+
+        <div class="card">
+            <h3>Surface Area</h3>
+            <p>Projectile area exposed to air</p>
+        </div>
+    </div>
+
+    <p>
+    The simulation is executed using MATLAB's numerical
+    differential equation solver, ode45.
+    </p>
+
+    <a class="button" href="MATLAB/ProjectileMotionApp.m">
+        View MATLAB Source Code
+    </a>
+</section>
+
+<section id="results">
+    <h2>Experimental Results</h2>
+
+    <p>
+    The experiments investigate how launch angle,
+    initial velocity, mass, and surface area affect
+    maximum height, flight time, and horizontal range.
+    </p>
+
+    <p>
+    Experimental graphs and numerical comparisons
+    will be presented in this section.
+    </p>
+</section>
+
+<section id="conclusion">
+    <h2>Conclusion</h2>
+
+    <p>
+    This project demonstrates how MATLAB can be used
+    to model projectile motion and analyze the effects
+    of air resistance. Comparing both models helps
+    demonstrate the importance of drag forces in
+    real-world projectile motion.
+    </p>
+</section>
+
+<footer>
+    <p>MATLAB Projectile Motion Course Enhancement Project</p>
+    <p>Physics and Engineering Simulation</p>
+</footer>
+
+</body>
+</html>
